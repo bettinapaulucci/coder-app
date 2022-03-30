@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import CartWidget from './CartWidget';
 
 const pages = ['Link 1', 'Link 2', 'Link 3'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -39,7 +40,7 @@ export default function NavBar () {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
@@ -47,6 +48,7 @@ export default function NavBar () {
             BRAND
           </Typography>
 
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -89,7 +91,7 @@ export default function NavBar () {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            BRAND
+          
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -104,9 +106,9 @@ export default function NavBar () {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Ver Carrito">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <CartWidget/>
               </IconButton>
             </Tooltip>
             <Menu
