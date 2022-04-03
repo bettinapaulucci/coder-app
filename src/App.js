@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
     <NavBar />
-    <ItemListContainer/>
+    <ItemListContainer message={'ACÁ VA NUESTRO CATÁLOGO'}/>
     </>
   );
 }

@@ -1,12 +1,16 @@
 import * as React from 'react'
-import Carrito from '../Images/Carrito.svg'
+import s from './CartWidget.module.css'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 export default function CartWidget() {
   return (
     <>
 
-    <img width="30px" src= {Carrito} alt="CarritoDeCompras" /> (0)
+    <div>
+    <ShoppingCartIcon className={s.colorIcon} />
 
+    </div>
     </>
   );
 }
