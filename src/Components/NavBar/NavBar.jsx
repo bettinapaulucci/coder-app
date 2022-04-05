@@ -7,11 +7,10 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 const pages = ['Link 1', 'Link 2', 'Link 3'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
