@@ -17,19 +17,24 @@ export default function ItemCount({stock}) {
     }
 
     function onAdd () {
-        alert ('Agregaste ' + count + ' productos a tu carrito');
+      if (count > 0) {
+        alert ('Agregaste ' + count + ' productos a tu carrito'); }
+      else {
+        alert ('No agregaste productos a tu carrito')
+      }
+
     }
 
   return (
     <>
     
       <div className={s.botonesCount}>
-      <Button onClick={subs} variant="contained" color="error" className={s.botonSubs} >-</Button>
+      <Button onClick={subs} variant="outlined" size="small" className={s.botonSubs} >-</Button>
       <p> {count} </p>
-      <Button onClick={adding} variant="contained" color="success" className={s.botonAdding}>+</Button>
+      <Button onClick={adding} variant="outlined" size="small" className={s.botonAdding}>+</Button>
       </div>
       <div className={s.botonAdd}>
-      <Button onClick={onAdd} variant="contained">Comprar</Button>  
+      <Button onClick={onAdd} variant="contained" size="large">Comprar</Button>  
       </div>
     </>
  );

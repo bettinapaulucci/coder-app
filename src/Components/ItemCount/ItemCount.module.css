@@ -5,15 +5,13 @@
 
 .botonAdd {
     display: flex;
-    align-content: flex-start;
+    align-content: flex-start;    
 }
 
 .botonAdding {
-    size: small !important;
     margin: 5px !important;
 }
 
 .botonSubs {
-    size: small !important;
     margin: 5px !important;
 }

@@ -1,28 +1,59 @@
-const productos = [
-    {
-        id: 1,
-        nombre: 'DRACENA KIWI',
-        precio: '$1100',
-        imagen: 'https://i.ibb.co/4FNmnzZ/41-8fa9ae259d12817b0116263997203149-640-01-2c46bb48f8e0e2eab816468378862020-640-0.jpg',
-    },
+const productos = [{
+    "id": 1,
+    "image": "https://i.ibb.co/HVFdH2v/Remera-amarilla.jpg",
+    "name": "REMERA AMARILLA",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 650.00,
+    "stock": 10
+  }, {
+    "id": 2,
+    "image": "https://i.ibb.co/mbgh4nD/Remera-rosa.jpg",
+    "name": "REMERA ROSA",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 650.00,
+    "stock": 10
+  }, {
+    "id": 3,
+    "image": "https://i.ibb.co/vw38vhc/Remera-blanca.jpg",
+    "name": "REMERA BLANCA",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 650.00,
+    "stock": 10
+  }, {
+    "id": 4,
+    "image": "https://i.ibb.co/MDcyngM/Combo-blanco.jpg",
+    "name": "COMBO BLANCO",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 1300.00,
+    "stock": 5
+  }, {
+    "id": 5,
+    "image": "https://i.ibb.co/nMM0dfM/Combo-gris.jpg",
+    "name": "COMBO GRIS",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 1300.00,
+    "stock": 5
+  }, {
+    "id": 6,
+    "image": "https://i.ibb.co/NKX6MTD/Totebag-1.jpg",
+    "name": "TOTE BAG FLOWER",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 850.00,
+    "stock": 10
+  }, {
+    "id": 7,
+    "image": "https://i.ibb.co/RHMJXW6/Totebag-2.jpg",
+    "name": "TOTE BAG COSMOS",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 850.00,
+    "stock": 10
+  }, {
+    "id": 8,
+    "image": "https://i.ibb.co/m6KGYdV/Totebag-3.jpg",
+    "name": "TOTE BAG NATURE",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "price": 850.00,
+    "stock": 10
 
-    {
-        id: 2,
-        nombre: 'FICUS PANDURATA',
-        precio: '$6000',
-        imagen: 'https://i.ibb.co/g6dS4jx/5d84819bb49fb0104b775b14-large1-1fe7252cbb3ae54f6c15908447055656-640-0.jpg',
-    },
-    {
-        id: 3,
-        nombre: 'MONSTERA',
-        precio: '$3300',
-        imagen: 'https://i.ibb.co/7CQ2HXB/d7d0b184ca69a8b1533fdbffba1c1fd11-e8b5e4a46e8798d95816469190194393-640-0.jpg',
-    },
-    {
-        id: 4,
-        nombre: 'CROTÓN HIBRIDO',
-        precio: '$1000',
-        imagen: 'https://i.ibb.co/b7LCgCR/croton-petra-21-f30a2f0b2b536d01f216342315710333-1024-10241-020cf5cb92b3890b3816468515147993-640-0.jpg',
-    }
-]
+  }]
 export default productos;

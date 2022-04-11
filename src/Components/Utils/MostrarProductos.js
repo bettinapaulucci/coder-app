@@ -1,7 +1,7 @@
 let isOk = true;
 
 
-const Promesas = (time, task) => {
+const MostrarProductos = (time, task) => {
     return new Promise ((resolve, reject) => {
         setTimeout (() => {
             if (isOk) {
@@ -12,4 +12,4 @@ const Promesas = (time, task) => {
 
         }, time)})};
 
-export default Promesas;
+export default MostrarProductos;

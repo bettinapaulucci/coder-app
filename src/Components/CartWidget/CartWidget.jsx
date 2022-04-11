@@ -8,8 +8,7 @@ export default function CartWidget() {
     <>
 
     <div>
-    <ShoppingCartIcon className={s.colorIcon} />
-
+          <ShoppingCartIcon className={s.colorIcon} />
     </div>
     </>
   );
