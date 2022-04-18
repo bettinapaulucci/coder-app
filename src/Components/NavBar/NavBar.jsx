@@ -3,19 +3,18 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
 import CartWidget from '../CartWidget/CartWidget';
 import s from '../NavBar/NavBar.module.css'
+import { Link } from 'react-router-dom';
 
-const pages = ['Remeras', 'Tote Bags', 'Combos'];
 
 export default function NavBar () {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -26,18 +25,16 @@ export default function NavBar () {
     setAnchorElNav(null);
   };
 
+
   return (
     <AppBar className= {s.colorNavBar} position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-        <img src="https://i.ibb.co/d4gM0Nh/Logotipo-bear.png" alt="logo" width='180px' />
-          
+      <Container maxWidth="xl"  >
+        <Toolbar>
+        <Link to='/'><img src="https://i.ibb.co/d4gM0Nh/Logotipo-bear.png" alt="logo" width='120px' className= {s.logoImagen} /></Link> 
 
-          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -61,33 +58,16 @@ export default function NavBar () {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              }}>
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-          
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}><Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
+                sx={{ my: 2, color: 'white', display: 'block' }}>
+              <Link to='/category/remeras' className= {s.linkNavbar}>Remeras</Link>
+              <Link to='/category/totebags' className= {s.linkNavbar}>Totebags</Link>
+              <Link to='/category/combos' className= {s.linkNavbar}>Combos</Link>
               </Button>
-            ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

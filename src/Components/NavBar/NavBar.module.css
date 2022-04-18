@@ -2,3 +2,14 @@
     background-color: coral !important;
 }
 
+.linkNavbar {
+    color: white !important;
+    text-decoration: none !important;
+    margin: 0px 7px;
+    padding: 0px;
+}
+
+.logoImagen {
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+}

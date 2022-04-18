@@ -1,15 +1,16 @@
-let isOk = true;
+import productos from "./Productos";
 
-
-const MostrarProductos = (time, task) => {
+const MostrarProductos = (category) => {
     return new Promise ((resolve, reject) => {
+        const filtroProductos = productos.filter ((producto) => producto.category === category 
+        );
         setTimeout (() => {
-            if (isOk) {
-                resolve (task);
-            } else {
-                reject ('Error')
-            }
-
-        }, time)})};
+            if (category) {
+                resolve (filtroProductos);
+            } else
+                resolve (productos);
+        },2000);
+    });
+};
 
 export default MostrarProductos;

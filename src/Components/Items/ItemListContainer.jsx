@@ -1,23 +1,26 @@
 import * as React from 'react'
 import { useState, useEffect } from 'react';
 import MostrarProductos from '../Utils/MostrarProductos';
-import Productos from '../Utils/Productos';
-import ItemList from '../Items/ItemList'
+import ItemList from '../Items/ItemList';
+import { useParams } from 'react-router-dom';
 import s from '../Items/ItemListContainer.module.css'
 
-export default function ItemListContainer() {
-const [Items, setItems] = useState([]);
+const ItemListContainer = () => {
+const [Productos, setProductos] = useState([]);
 
-  useEffect (() => {
-    MostrarProductos (2000, Productos)
-    .then(res => setItems (res))
+const {category} = useParams();
+
+  useEffect(() => {
+    MostrarProductos (category)
+    .then(res => setProductos (res))
     .catch(error => console.log(error));
-  }, [Items])
+  }, [category]);
 
   return (
     <>
-    <div className= {s.containerI}> <ItemList productos= {Items} /></div>
+    <div className= {s.containerI}> <ItemList productos= {Productos} /></div>
     
     </>
   );
 }
+export default ItemListContainer
