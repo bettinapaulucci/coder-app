@@ -1,17 +1,46 @@
-.botonesCount {
+.containerCount {
     display: flex;
-    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.botonAdd {
+.containerButton {
     display: flex;
-    align-content: flex-start;    
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 150px;
+    border: 2px solid coral;
+    margin-right: 15px;
 }
 
-.botonAdding {
-    margin: 5px !important;
+button {
+    color: coral;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 7px 10px;
 }
 
-.botonSubs {
-    margin: 5px !important;
+.number {
+    font-size: 20px;
+    font-weight: 700;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+}
+
+.add {
+    flex: 1;
+    background-color: coral;
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    padding: 8px 12px;
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    box-shadow: 3px 2px 3px 2px #4b4b4b3e;
+    cursor: pointer;
 }

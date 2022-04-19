@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Card, CardMedia, CardContent, Typography, CardActions} from '@mui/material'
 import s from '../Items/ItemListContainer.module.css'
 
@@ -23,6 +24,7 @@ export default function Item({id, image, name, description, price, stock}) {
         </Typography>
       </CardContent>
       <CardActions>
+      <Link to={`/item/${id}`} >Ver detalle</Link>
       </CardActions>
     </Card>
   )

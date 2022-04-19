@@ -6,10 +6,13 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 export default function CartWidget() {
   return (
     <>
+     
 
     <div>
           <ShoppingCartIcon className={s.colorIcon}/>
     </div>
+    
+     <h5>(0)</h5>
     </>
   );
 }

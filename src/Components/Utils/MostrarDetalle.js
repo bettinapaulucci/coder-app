@@ -5,6 +5,6 @@ export const MostrarDetalle = () => {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
                 resolve (Producto);
-            }, 2000);
+            }, 300);
     });
     };
