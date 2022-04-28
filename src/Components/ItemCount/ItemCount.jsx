@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Button from '@mui/material/Button';
 import s from '../ItemCount/ItemCount.module.css'
 
 const ItemCount = ({ stock, initial, addCart }) => {

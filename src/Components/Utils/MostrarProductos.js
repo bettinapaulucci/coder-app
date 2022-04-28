@@ -9,7 +9,7 @@ const MostrarProductos = (category) => {
                 resolve (filtroProductos);
             } else
                 resolve (productos);
-        },2000);
+        },500);
     });
 };
 

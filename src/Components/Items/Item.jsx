@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Card, CardMedia, CardContent, Typography, CardActions} from '@mui/material'
-import s from '../Items/ItemListContainer.module.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Card, CardMedia, CardContent, Typography, CardActions} from '@mui/material';
+import s from '../Items/ItemListContainer.module.css';
 
-export default function Item({id, image, name, description, price, stock}) {
+const Item = ({id, image, name, description, price}) => {
   return (
     <Card className={s.cardI} key={id} sx={{ maxWidth: 300  }}>
       <CardMedia
@@ -24,8 +24,10 @@ export default function Item({id, image, name, description, price, stock}) {
         </Typography>
       </CardContent>
       <CardActions>
-      <Link to={`/item/${id}`} >Ver detalle</Link>
+      <Link to={`/item/${id}`}>Ver detalle</Link>
       </CardActions>
     </Card>
   )
-}
+};
+
+export default Item
