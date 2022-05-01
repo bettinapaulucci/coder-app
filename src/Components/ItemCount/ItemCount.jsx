@@ -1,39 +1,34 @@
-import React, { useState } from 'react'
+import React from "react";
+import { useState} from "react";
 import s from '../ItemCount/ItemCount.module.css'
 
-const ItemCount = ({ stock, initial, addCart }) => {
-  const [number, setNumber] = useState(initial);
+const ItemCount = ({ stock, initial}) => {
+  const [count, setCount] = useState(initial)
 
   const add = () => {
-      number < stock && setNumber(number + 1);
+    count < stock && setCount(count + 1);
   };
 
   const subs = () => {
-      number > initial && setNumber(number - 1);
+    count > initial && setCount(count - 1);
   };
 
-  const handleClick = () => {
-      addCart(number);
-  };
 
   return (
       <div className={s.containerCount}>
           <div className={s.containerButton}>
-              <button disabled={number === initial} onClick={subs}>
+              <button disabled={count === initial} onClick={subs}>
                   -
               </button>
-              <p className={s.number}> {number}</p>
-              <button disabled={number === stock} onClick={add}className={s.botonAdding}>
+              <p className={s.number}> {count}</p>
+              <button disabled={count === stock} onClick={add}className={s.botonAdding}>
                   +
               </button>
+          </div>  
           </div>
-          <div>
-              <button onClick={handleClick} className={s.add}>
-                  Add to cart
-              </button>
-          </div>
-      </div>
   );
 };
 
 export default ItemCount;
+
+

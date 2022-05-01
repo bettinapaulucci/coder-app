@@ -1,9 +1,9 @@
 .colorNavBar {
-    background-color: coral !important;
+    background-color: #deb887 !important;
 }
 
 .linkNavbar {
-    color: white !important;
+    color: #533814 !important;
     text-decoration: none !important;
     margin: 0px 7px;
     padding: 0px;
@@ -13,3 +13,4 @@
     margin: 0px 10px 0px 0px;
     padding: 0px;
 }
+

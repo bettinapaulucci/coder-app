@@ -1,18 +1,14 @@
-import * as React from 'react'
-import s from './CartWidget.module.css'
+import * as React from 'react';
+import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
 
-
-export default function CartWidget() {
+const CartWidget = () => {
   return (
-    <>
-     
-
-    <div>
-          <ShoppingCartIcon className={s.colorIcon}/>
-    </div>
-    
-     <h5>(0)</h5>
-    </>
+    <IconButton aria-label="cart">
+      <Link to='/cart'> <ShoppingCartIcon/> </Link>
+    </IconButton>
   );
-}
+};
+
+export default CartWidget

@@ -1,17 +1,11 @@
-import React, { useState } from 'react'
-import s from '../Items/ItemDetail.module.css'
-import ItemCount from '../ItemCount/ItemCount'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import s from '../Items/ItemDetail.module.css';
+import ItemCount from '../ItemCount/ItemCount';
+import AddToCart from '../Modal/AddToCart';
 
 function ItemDetail({Producto}) {
 
-  const [number, setNumber] = useState(0);
-
-  const addCart = (cant) => {
-      setNumber(cant);
-  };
-
-   console.log(number);
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -25,12 +19,17 @@ function ItemDetail({Producto}) {
 
     <div>
     <p className={s.description}>{Producto.description}</p>
-    {number === 0 ? <ItemCount stock={Producto.stock} initial={1} addCart={addCart} /> : (<Link to='/cart'> Ir al Carrito</Link>)}
-    
-    </div>
-    </div>
+    <ItemCount stock={Producto.stock} initial={1}/>
 
-    
+    <AddToCart
+              message='Add to cart'
+              btnContent='Add to cart'
+              count={count}
+              setCount={setCount}
+              item={Producto}
+            />
+    </div>
+    </div>
     </div>
     </>
   )
